@@ -25,15 +25,7 @@
         let computerSelection = computerPlay();
         computerSelection = computerSelection.toLowerCase();
 
-        let playerSelection = prompt("Pick either Rock, Paper, or Scissors: ");
-        try {
-                playerSelection = prompt("Pick either Rock, Paper, or Scissors: ");
-                playerSelection = playerSelection.toLowerCase();
-            } catch {
-                playerSelection = prompt("Pick either Rock, Paper, or Scissors: ");
-            }
-
-
+        let playerSelection;
         while (playerSelection !== "rock" && playerSelection !== "paper" && playerSelection !== "scissors") {
             try {
                 playerSelection = prompt("Pick either Rock, Paper, or Scissors: ");
