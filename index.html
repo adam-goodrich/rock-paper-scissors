@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rock, Paper, Scissors</title>
+    <meta charset="UTF-8"/>
+  </head>
+  <body>
+    <script>
+      let computerScore = 0;
+      let playerScore = 0;
+
+      function game() {  
+        
+        function computerPlay() {
+            let comPlay = Math.floor(Math.random() * 3) + 1;
+            if (comPlay === 1) {
+                return "Rock";
+            } else if (comPlay === 2) {
+                return "Paper";
+            } else if (comPlay === 3) {
+                return "Scissors";
+            }
+        };
+
+        let computerSelection = computerPlay();
+        computerSelection = computerSelection.toLowerCase();
+
+        let playerSelection = prompt("Pick either Rock, Paper, or Scissors: ");
+        playerSelection = playerSelection.toLowerCase();
+
+
+        while (playerSelection !== "rock" && playerSelection !== "paper" && playerSelection !== "siccors") {
+            try {
+                playerSelection = prompt("Pick either Rock, Paper, or Scissors: ");
+                playerSelection = playerSelection.toLowerCase();
+            } catch {
+                playerSelection = prompt("Pick either Rock, Paper, or Scissors: ");
+            }
+        };
+
+        function singleRound(playerSelection, computerSelection) {
+            if (playerSelection === computerSelection) {
+                return `It was a tie. You both picked ${playerSelection}.
+The score is computer ${computerScore}. You ${playerScore}.`;
+            } else if (playerSelection === 'rock'){
+                if (computerSelection === "paper") {
+                    computerScore++;
+                    return `You lose. Computer picked paper.
+The score is computer ${computerScore}. You ${playerScore}.`;
+                } else {
+                    playerScore++;
+                    return `You win. Computer picked scissors.
+The score is computer ${computerScore}. You ${playerScore}.`;
+                }
+            } else if (playerSelection === 'paper'){
+                if (computerSelection === "scissors") {
+                    computerScore++;
+                    return `You lose. Computer picked scissors.
+The score is computer ${computerScore}. You ${playerScore}.`;
+                } else {
+                    playerScore++;
+                    return `You win. Computer picked rock.
+The score is computer ${computerScore}. You ${playerScore}.`;
+                }
+            } else if (playerSelection === 'scissors'){
+                if (computerSelection === "rock") {
+                    computerScore++;
+                    return `You lose. Computer picked rock.
+The score is computer ${computerScore}. You ${playerScore}.`;
+                } else {
+                    playerScore++;
+                    return `You win. Computer picked paper.
+The score is computer ${computerScore}. You ${playerScore}.`;
+                }
+            }
+        }
+        console.log(singleRound(playerSelection, computerSelection));
+      }
+
+      for (let i = 0; i < 5; i++) {
+          game();
+      }
+
+      while (computerScore === playerScore) {
+          console.log(`Tie Breaker!`)
+          game();
+      }
+
+      console.log(`The final score is Computer ${computerScore}. You ${playerScore}.`)
+    </script>
+  </body>
+</html>
