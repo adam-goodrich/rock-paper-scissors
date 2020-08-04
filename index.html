@@ -83,6 +83,11 @@ The score is computer ${computerScore}. You ${playerScore}.`;
           game();
       }
 
+      if (computerScore > playerScore) {
+          console.log(`The computer beat you!`)
+      } else {
+          console.log(`You defeated the computer!`)
+      }
       console.log(`The final score is Computer ${computerScore}. You ${playerScore}.`)
     </script>
   </body>
