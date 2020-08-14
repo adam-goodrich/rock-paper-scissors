@@ -1,0 +1,253 @@
+   
+        html {
+            display: block;
+            text-align: center;
+            box-sizing: border-box;
+            font-size: 16px;
+            background-color: azure;
+            font-family: 'Rowdies', cursive;
+        }
+        
+                h2 {
+            height: 2rem;
+            border: 3px solid black;
+            box-shadow: 2px 5px #666;
+            background-color: #ddd;
+            margin: 0;
+            margin-top: 1rem;
+        
+        }
+        
+                body {
+            padding: .5vw 0 0 0;
+        }
+        
+                .main {
+            text-align: center;
+        }
+        
+                .container {
+            background-color: azure;
+            border: 3px solid black;
+            font-size: 4vw;
+            border-radius: 15px; 
+        }
+                .score {
+            padding: 0 0 18px 0;
+            display: block;
+            margin: 0 auto 1.5rem auto;
+            width: 150px;
+            height: 3rem;
+            border-radius: 5%;
+        
+        }
+        
+                .score1 {
+            margin: .5rem;
+            font-size: 2rem;
+        }
+        
+                .center {
+            text-align: center;
+            display: inline-block;
+            width: 80vw;
+            max-height: 70%;
+            background-color: #0f4c75;
+            border: 3px solid black;
+            border-radius: 15px; 
+            padding: 1.5rem;
+        
+        }
+        
+                .win {
+            min-height: 3vw;
+            max-height: 3.5vw;
+            color: azure;
+            background-color: azure;
+            border: 3px solid black;
+            text-shadow: .2vw .2vw #00b7c2;
+            border-radius: 15px; 
+            margin: 10px;
+            font-size: 2.9vw; 
+            text-align: center;
+            line-height: 3vw;
+            padding: 1rem
+        }
+        
+                .content {
+            color: azure;
+            -webkit-text-stroke-width: .2vw;
+            -webkit-text-stroke-color: black;
+            text-shadow: .2vw .2vw black;
+            background-color: #00b7c2;
+            border: 3px solid black;
+            border-radius: 15px; 
+            margin: 10px;
+            font-size: 3.2vw;
+            padding: .3vh;
+        }
+        
+                .hands {
+            width: 6vw;
+            display: flex;
+            flex: 1;
+            justify-content: center;
+            margin: 0 auto 0 auto;
+            max-width: 6vw;
+            padding-bottom: 3vh;
+        }
+        
+                .btn {
+            margin: .8vw .8vw 0 .8vw;
+            font-size: 1vw;
+            width: 18vw;
+            border: 3px solid black;
+            border-radius: 15px; 
+            box-shadow: 0 .3vw #999;
+            outline: none;
+        }
+        
+                .btn:active {
+            box-shadow: 0 2px #666;
+            transform: translateY(2px);
+        }
+        
+                .rounds {
+            margin: .3vw .4em .3em .4em;
+            font-size: 2.8vw;
+            width: 18vw;
+            border: 3px solid black;
+            border-radius: 15px; 
+            box-shadow: 0 .3vw #999;
+            outline: none;
+            background-color :#ddd;
+        }
+        
+                .rounds:active {
+            box-shadow: 0 2px  #666;
+            transform: translateY(2px);
+        }
+        
+                footer {
+            display: block;
+            text-align: center;
+            line-height: 10%;
+            font-size: 15px;
+        }
+        
+                @media only screen and (max-width: 600px) {
+                    html {
+                display: block;
+                text-align: center;
+                box-sizing: border-box;
+                font-size: .9rem;
+                background-color: azure;
+                font-family: 'Rowdies', cursive;
+                padding-top: 15vw;
+            }
+                    .btn {
+                margin: 1vw;
+                font-size: 1.5rem;
+                width: 21vw;
+                border: 3px solid black;
+                border-radius: 15px; 
+                box-shadow: 0 .3vw #999;
+                outline: none;
+            }
+        
+                    .win {
+                min-height: 3.5vw;
+                color: azure;
+                background-color: azure;
+                border: 3px solid black;
+                text-shadow: .2vw .2vw #00b7c2;
+                border-radius: 15px; 
+                margin: .5rem;
+                font-size: 3vw; 
+                text-align: center;
+                line-height: 110%;
+                padding: 1.2rem 1rem 1.2rem 1rem;
+            }
+                    .center {
+                text-align: center;
+                display: inline-block;
+                width: 80vw;
+                max-height: 70%;
+                background-color: #0f4c75;
+                border: 3px solid black;
+                border-radius: 15px; 
+                padding: .9rem;
+        
+            }
+                    .content {
+                color: azure;
+                -webkit-text-stroke-width: .2vw;
+                -webkit-text-stroke-color: black;
+                text-shadow: .2vw .2vw black;
+                background-color: #00b7c2;
+                border: 3px solid black;
+                border-radius: 15px; 
+                margin: 10px;
+                font-size: 5vw;
+                padding: .9vh;
+            }
+        
+                    .hands {
+                width: 6vw;
+                display: flex;
+                flex: 1;
+                justify-content: center;
+                margin: 0 auto 0 auto;
+                max-width: 6vw;
+                padding-bottom: 1vh;
+            }
+        }
+        
+                @media screen and (min-width: 1600px) {
+                    .rounds {
+                margin: .5em;
+                font-size: 1.5vw;
+                width: 18vw;
+                border: 3px solid black;
+                border-radius: 15px; 
+                box-shadow: 0 .3vw #999;
+                outline: none;
+                background-color :#ddd;
+            }
+        
+                    .win {
+                min-height: 3.5vw;
+                color: azure;
+                background-color: azure;
+                border: 3px solid black;
+                text-shadow: .2vw .2vw #00b7c2;
+                border-radius: 15px; 
+                margin: .5rem;
+                font-size: 2vw; 
+                text-align: center;
+                line-height: 110%;
+                padding: 1.2vw 1.2vw 0 1.2vw;
+            }
+                    .hands {
+                width: 6vw;
+                display: flex;
+                flex: 1;
+                justify-content: center;
+                margin: 0 auto 0 auto;
+                height: 18vw;
+                padding-bottom: 2vh;
+            }
+                    .content {
+                color: azure;
+                -webkit-text-stroke-width: .2vw;
+                -webkit-text-stroke-color: black;
+                text-shadow: .2vw .2vw black;
+                background-color: #00b7c2;
+                border: 3px solid black;
+                border-radius: 15px; 
+                margin: 10px;
+                font-size: 3vw;
+                padding: .9vh;
+            }
+        }
+        

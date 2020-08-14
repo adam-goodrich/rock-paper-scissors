@@ -3,92 +3,38 @@
   <head>
     <title>Rock, Paper, Scissors</title>
     <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Rowdies&display=swap" rel="stylesheet">
+    <link rel="rock icon" href="images/rock.png" />
+    <link rel="stylesheet" href="style.css">
   </head>
-  <body>
-    <script>
-      let computerScore = 0;
-      let playerScore = 0;
+    <body>
+        <div class="score">
+            <h2>SCORE</h2>
+        </div>
+        <button class="rounds" id="3">Best of 3</button>
+        <button class="rounds" id="5">Best of 5</button>
+        <button class="rounds" id="7">Best of 7</button>
+        <div class="center">
 
-      function game() {  
-        
-        function computerPlay() {
-            let comPlay = Math.floor(Math.random() * 3) + 1;
-            if (comPlay === 1) {
-                return "Rock";
-            } else if (comPlay === 2) {
-                return "Paper";
-            } else if (comPlay === 3) {
-                return "Scissors";
-            }
-        };
 
-        let computerSelection = computerPlay();
-        computerSelection = computerSelection.toLowerCase();
+            <div id="main" class="main">
 
-        let playerSelection;
-        while (playerSelection !== "rock" && playerSelection !== "paper" && playerSelection !== "scissors") {
-            try {
-                playerSelection = prompt("Pick either Rock, Paper, or Scissors: ");
-                playerSelection = playerSelection.toLowerCase();
-            } catch {
-                playerSelection = prompt("Pick either Rock, Paper, or Scissors: ");
-            }
-        };
+                <div class="hands">
+                    <input type="image" src="images/rock.png" name="hands" class="btn" id="rock"/>
+                    <input type="image" src="images/paper.png" name="hands" class="btn" id="paper"/>
+                    <input type="image" src="images/scissors.png" name="hands" class="btn" id="scissors"/>
+                </div>
 
-        function singleRound(playerSelection, computerSelection) {
-            if (playerSelection === computerSelection) {
-                return `It was a tie. You both picked ${playerSelection}.
-The score is computer ${computerScore}. You ${playerScore}.`;
-            } else if (playerSelection === 'rock'){
-                if (computerSelection === "paper") {
-                    computerScore++;
-                    return `You lose. Computer picked paper.
-The score is computer ${computerScore}. You ${playerScore}.`;
-                } else {
-                    playerScore++;
-                    return `You win. Computer picked scissors.
-The score is computer ${computerScore}. You ${playerScore}.`;
-                }
-            } else if (playerSelection === 'paper'){
-                if (computerSelection === "scissors") {
-                    computerScore++;
-                    return `You lose. Computer picked scissors.
-The score is computer ${computerScore}. You ${playerScore}.`;
-                } else {
-                    playerScore++;
-                    return `You win. Computer picked rock.
-The score is computer ${computerScore}. You ${playerScore}.`;
-                }
-            } else if (playerSelection === 'scissors'){
-                if (computerSelection === "rock") {
-                    computerScore++;
-                    return `You lose. Computer picked rock.
-The score is computer ${computerScore}. You ${playerScore}.`;
-                } else {
-                    playerScore++;
-                    return `You win. Computer picked paper.
-The score is computer ${computerScore}. You ${playerScore}.`;
-                }
-            }
-        }
-        console.log(singleRound(playerSelection, computerSelection));
-      }
+                <div id="container" class="container"></div>
 
-      for (let i = 0; i < 5; i++) {
-          game();
-      }
+            </div>
 
-      while (computerScore === playerScore) {
-          console.log(`Tie Breaker!`)
-          game();
-      }
-
-      if (computerScore > playerScore) {
-          console.log(`The computer beat you!`)
-      } else {
-          console.log(`You defeated the computer!`)
-      }
-      console.log(`The final score is Computer ${computerScore}. You ${playerScore}.`)
-    </script>
-  </body>
-</html>
+        </div>
+        <footer>
+            <p>Created By Adam Goodrich</p>
+            <p>view on <a href="https://github.com/adam-goodrich/rock-paper-scissors" target=”_blank”>Github</a></p>
+        </footer>
+        <script src="logic.js"></script>
+    </body>
+    </html>
