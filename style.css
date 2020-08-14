@@ -60,18 +60,17 @@
         }
         
                 .win {
-            min-height: 3vw;
-            max-height: 3.5vw;
+            min-height: 3.5vw;
             color: azure;
             background-color: azure;
             border: 3px solid black;
             text-shadow: .2vw .2vw #00b7c2;
             border-radius: 15px; 
-            margin: 10px;
-            font-size: 2.9vw; 
+            margin: .5rem;
+            font-size: 3vw; 
             text-align: center;
-            line-height: 3vw;
-            padding: 1rem
+            line-height: 110%;
+            padding: 1.2rem 1rem 1.2rem 1rem;
         }
         
                 .content {
