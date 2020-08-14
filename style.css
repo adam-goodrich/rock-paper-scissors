@@ -214,6 +214,17 @@
                 outline: none;
                 background-color :#ddd;
             }
+
+                    .btn {
+                margin: .8vw .8vw 0 .8vw;
+                font-size: 1vw;
+                width: 18vw;
+                height: 15vw;
+                border: 3px solid black;
+                border-radius: 15px; 
+                box-shadow: 0 .3vw #999;
+                outline: none;
+            }
         
                     .win {
                 min-height: 3.5vw;
