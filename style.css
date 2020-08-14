@@ -51,7 +51,6 @@
             text-align: center;
             display: inline-block;
             width: 80vw;
-            max-height: 70%;
             background-color: #0f4c75;
             border: 3px solid black;
             border-radius: 15px; 
@@ -60,17 +59,18 @@
         }
         
                 .win {
-            min-height: 3.5vw;
+            min-height: 3vw;
+            max-height: 3.5vw;
             color: azure;
             background-color: azure;
             border: 3px solid black;
             text-shadow: .2vw .2vw #00b7c2;
             border-radius: 15px; 
-            margin: .5rem;
-            font-size: 3vw; 
+            margin: 10px;
+            font-size: 2.9vw; 
             text-align: center;
-            line-height: 110%;
-            padding: 1.2rem 1rem 1.2rem 1rem;
+            line-height: 3vw;
+            padding: 1rem
         }
         
                 .content {
@@ -100,6 +100,7 @@
             margin: .8vw .8vw 0 .8vw;
             font-size: 1vw;
             width: 18vw;
+            height: 18vw;
             border: 3px solid black;
             border-radius: 15px; 
             box-shadow: 0 .3vw #999;
